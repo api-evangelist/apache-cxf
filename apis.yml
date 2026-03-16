@@ -1,0 +1,36 @@
+aid: apache-cxf
+name: Apache CXF
+description: >-
+  Apache CXF is an open-source services framework that helps build and develop web services using frontend programming APIs like JAX-WS and JAX-RS. It supports SOAP, REST, and CORBA services with full WS-* standards support.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Web Services
+  - SOAP
+  - REST
+  - JAX-RS
+  - JAX-WS
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-cxf:apache-cxf
+    name: Apache CXF
+    description: >-
+      CXF provides Java APIs for building both SOAP (JAX-WS) and REST (JAX-RS) web services, with support for WSDL-first and code-first development, WS-Security, WS-ReliableMessaging, and automatic client/server code generation.
+    humanURL: https://cxf.apache.org/docs/index.html
+    tags:
+      - Java
+      - SOAP
+      - REST
+      - Web Services
+    properties:
+      - type: Documentation
+        url: https://cxf.apache.org/docs/index.html
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
