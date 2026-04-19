@@ -1,0 +1,91 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "cxf": "https://cxf.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "JaxRsEndpoint": "cxf:JaxRsEndpoint",
+    "JaxWsEndpoint": "cxf:JaxWsEndpoint",
+    "WsSecurityConfig": "cxf:WsSecurityConfig",
+    "action": {
+      "@id": "cxf:action",
+      "@type": "xsd:string"
+    },
+    "address": {
+      "@id": "cxf:address",
+      "@type": "xsd:string"
+    },
+    "encryptionPropFile": {
+      "@id": "cxf:encryptionPropFile",
+      "@type": "xsd:string"
+    },
+    "encryptionUser": {
+      "@id": "cxf:encryptionUser",
+      "@type": "xsd:string"
+    },
+    "endpointName": {
+      "@id": "cxf:endpointName",
+      "@type": "xsd:string"
+    },
+    "features": {
+      "@id": "cxf:features",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "implementor": {
+      "@id": "cxf:implementor",
+      "@type": "xsd:string"
+    },
+    "inInterceptors": {
+      "@id": "cxf:inInterceptors",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "outInterceptors": {
+      "@id": "cxf:outInterceptors",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "passwordCallbackClass": {
+      "@id": "cxf:passwordCallbackClass",
+      "@type": "xsd:string"
+    },
+    "passwordType": {
+      "@id": "cxf:passwordType",
+      "@type": "xsd:string"
+    },
+    "properties": {
+      "@id": "cxf:properties",
+      "@type": "@id"
+    },
+    "providers": {
+      "@id": "cxf:providers",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "serviceClass": {
+      "@id": "cxf:serviceClass",
+      "@type": "xsd:string"
+    },
+    "serviceName": {
+      "@id": "cxf:serviceName",
+      "@type": "xsd:string"
+    },
+    "signatureKeyIdentifier": {
+      "@id": "cxf:signatureKeyIdentifier",
+      "@type": "xsd:string"
+    },
+    "signaturePropFile": {
+      "@id": "cxf:signaturePropFile",
+      "@type": "xsd:string"
+    },
+    "user": {
+      "@id": "cxf:user",
+      "@type": "xsd:string"
+    },
+    "wsdlLocation": {
+      "@id": "cxf:wsdlLocation",
+      "@type": "xsd:string"
+    }
+  }
+}

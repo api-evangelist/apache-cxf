@@ -1,0 +1,10 @@
+{
+  "action": "UsernameToken Timestamp",
+  "passwordType": "PasswordDigest",
+  "user": "serviceUser",
+  "passwordCallbackClass": "com.example.PasswordCallbackHandler",
+  "signatureKeyIdentifier": "IssuerSerial",
+  "signaturePropFile": "keystore.properties",
+  "encryptionPropFile": "keystore.properties",
+  "encryptionUser": "serverPublicKey"
+}

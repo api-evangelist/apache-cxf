@@ -1,0 +1,146 @@
+vocabulary: 1.0.0
+info:
+  provider: Apache CXF
+  description: Vocabulary for Apache CXF, the Java web services framework supporting JAX-WS SOAP and JAX-RS REST.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: cxf-jaxws
+    version: 4.2.0
+    baseUrl: https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxws
+    status: active
+    description: JAX-WS SOAP web services frontend
+  - namespace: cxf-jaxrs
+    version: 4.2.0
+    baseUrl: https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxrs
+    status: active
+    description: JAX-RS REST web services frontend
+  resources:
+  - name: jaxrs-endpoint
+    description: REST endpoint configuration
+    actions:
+    - create
+    - configure
+    - expose
+    - register-provider
+    apis:
+    - cxf-jaxrs
+  - name: jaxws-endpoint
+    description: SOAP endpoint configuration
+    actions:
+    - create
+    - configure
+    - expose
+    - set-interceptors
+    apis:
+    - cxf-jaxws
+  - name: ws-security
+    description: WS-Security configuration
+    actions:
+    - configure-username-token
+    - configure-signature
+    - configure-encryption
+    - configure-saml
+    apis:
+    - cxf-jaxws
+  - name: interceptor
+    description: CXF interceptor for message processing
+    actions:
+    - add-inbound
+    - add-outbound
+    - add-fault
+    apis:
+    - cxf-jaxws
+    - cxf-jaxrs
+  - name: wsdl
+    description: WSDL contract for SOAP services
+    actions:
+    - publish
+    - generate-from-java
+    - parse-for-client
+    apis:
+    - cxf-jaxws
+  actions:
+  - name: expose
+    description: Publish a service endpoint
+    pattern: write
+  - name: configure
+    description: Set endpoint properties and features
+    pattern: write
+  - name: invoke
+    description: Call a web service operation
+    pattern: read
+  - name: generate
+    description: Generate Java code from WSDL or vice versa
+    pattern: write
+  schemas:
+    rest:
+    - JaxRsEndpoint
+    soap:
+    - JaxWsEndpoint
+    security:
+    - WsSecurityConfig
+  enums:
+    passwordType:
+    - PasswordDigest
+    - PasswordText
+    signatureKeyIdentifier:
+    - IssuerSerial
+    - DirectReference
+    - X509KeyIdentifier
+    - SKIKeyIdentifier
+    - Thumbprint
+  authentication:
+    schemes:
+    - HTTP Basic
+    - WS-Security UsernameToken
+    - WS-Security X.509
+    - WS-Security SAML
+    - OAuth2 (via JAX-RS filter)
+capability:
+  workflows: []
+  personas:
+  - id: java-developer
+    name: Java Developer
+    description: Builds REST or SOAP web services using CXF JAX-RS or JAX-WS APIs
+  - id: enterprise-architect
+    name: Enterprise Architect
+    description: Designs SOA and microservice architectures using CXF for service interoperability
+  - id: security-engineer
+    name: Security Engineer
+    description: Configures WS-Security, SAML, and PKI for CXF web service endpoints
+  domains:
+  - name: Web Services
+    description: SOAP and REST service development and deployment
+  - name: Service Security
+    description: WS-Security standards and OAuth integration
+  - name: Integration
+    description: Spring, Camel, and OSGi integration patterns
+  namespaces: []
+  binds: []
+crossReference:
+- resource: jaxrs-endpoint
+  operations:
+  - create
+  - configure
+  - expose
+  workflows: []
+  personas:
+  - java-developer
+- resource: jaxws-endpoint
+  operations:
+  - create
+  - configure
+  - expose
+  workflows: []
+  personas:
+  - java-developer
+  - enterprise-architect
+- resource: ws-security
+  operations:
+  - configure-username-token
+  - configure-saml
+  workflows: []
+  personas:
+  - security-engineer

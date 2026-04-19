@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/json-structure/apache-cxf-ws-security-config-structure.json",
+  "name": "WsSecurityConfig",
+  "description": "WS-Security configuration properties for Apache CXF WSS4J interceptors.",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "description": "Space-separated list of WS-Security actions to apply.",
+      "example": "UsernameToken Timestamp"
+    },
+    "passwordType": {
+      "type": "string",
+      "description": "Password encoding type for UsernameToken.",
+      "enum": [
+        "PasswordDigest",
+        "PasswordText"
+      ],
+      "example": "PasswordDigest"
+    },
+    "user": {
+      "type": "string",
+      "description": "Username for UsernameToken or keystore alias.",
+      "example": "serviceUser"
+    },
+    "passwordCallbackClass": {
+      "type": "string",
+      "description": "Fully qualified class name of the javax.security.auth.callback.CallbackHandler for password retrieval.",
+      "example": "com.example.PasswordCallbackHandler"
+    },
+    "signatureKeyIdentifier": {
+      "type": "string",
+      "description": "Key identifier type for XML Signature.",
+      "enum": [
+        "IssuerSerial",
+        "DirectReference",
+        "X509KeyIdentifier",
+        "SKIKeyIdentifier",
+        "Thumbprint"
+      ],
+      "example": "IssuerSerial"
+    },
+    "signaturePropFile": {
+      "type": "string",
+      "description": "Path to the signature keystore properties file.",
+      "example": "keystore.properties"
+    },
+    "encryptionPropFile": {
+      "type": "string",
+      "description": "Path to the encryption keystore properties file.",
+      "example": "keystore.properties"
+    },
+    "encryptionUser": {
+      "type": "string",
+      "description": "Alias of the recipient public key for encryption.",
+      "example": "serverPublicKey"
+    }
+  }
+}

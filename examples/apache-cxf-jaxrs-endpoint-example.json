@@ -1,0 +1,11 @@
+{
+  "address": "http://localhost:8080/api",
+  "serviceClass": "com.example.HelloServiceImpl",
+  "features": [
+    "org.apache.cxf.ext.logging.LoggingFeature"
+  ],
+  "providers": [
+    "com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"
+  ],
+  "properties": {}
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/json-schema/apache-cxf-jaxrs-endpoint-schema.json",
+  "title": "JaxRsEndpoint",
+  "description": "Configuration for a JAX-RS (REST) endpoint in Apache CXF, including address, service class, and features.",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string",
+      "description": "Base URL address for the JAX-RS endpoint.",
+      "example": "http://localhost:8080/api"
+    },
+    "serviceClass": {
+      "type": "string",
+      "description": "Fully qualified Java class name of the JAX-RS service implementation.",
+      "example": "com.example.HelloServiceImpl"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of CXF feature class names to apply to this endpoint.",
+      "example": [
+        "org.apache.cxf.ext.logging.LoggingFeature"
+      ]
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "JAX-RS provider class names (MessageBodyReader, MessageBodyWriter, ExceptionMapper, etc.).",
+      "example": [
+        "com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "description": "Additional CXF endpoint properties."
+    }
+  },
+  "required": [
+    "address",
+    "serviceClass"
+  ]
+}

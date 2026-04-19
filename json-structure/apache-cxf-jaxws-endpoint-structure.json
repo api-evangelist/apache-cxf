@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/json-structure/apache-cxf-jaxws-endpoint-structure.json",
+  "name": "JaxWsEndpoint",
+  "description": "Configuration for a JAX-WS (SOAP) endpoint in Apache CXF.",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string",
+      "description": "WSDL publish address for the JAX-WS endpoint.",
+      "example": "http://localhost:8080/HelloService"
+    },
+    "implementor": {
+      "type": "string",
+      "description": "Fully qualified Java class name of the JAX-WS service implementation.",
+      "example": "com.example.HelloServiceImpl"
+    },
+    "wsdlLocation": {
+      "type": "string",
+      "description": "Location of the WSDL file for contract-first services.",
+      "example": "classpath:wsdl/hello.wsdl"
+    },
+    "serviceName": {
+      "type": "string",
+      "description": "Qualified service name from the WSDL.",
+      "example": "{http://example.com}HelloService"
+    },
+    "endpointName": {
+      "type": "string",
+      "description": "Qualified port/endpoint name from the WSDL.",
+      "example": "{http://example.com}HelloPort"
+    },
+    "inInterceptors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Inbound interceptor class names.",
+      "example": [
+        "org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor"
+      ]
+    },
+    "outInterceptors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Outbound interceptor class names.",
+      "example": [
+        "org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor"
+      ]
+    }
+  },
+  "required": [
+    "address",
+    "implementor"
+  ]
+}
