@@ -51,16 +51,16 @@ apis:
     url: https://cxf.apache.org/javadoc/latest/
   - type: GitHubRepository
     url: https://github.com/apache/cxf
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxws
     title: cxf-rt-frontend-jaxws (Maven)
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxrs
     title: cxf-rt-frontend-jaxrs (Maven)
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.cxf/cxf-spring-boot-starter-jaxrs
     title: Spring Boot Starter JAX-RS (Maven)
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.cxf/cxf-spring-boot-starter-jaxws
     title: Spring Boot Starter JAX-WS (Maven)
   - type: JSONSchema
@@ -80,11 +80,11 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/json-structure/apache-cxf-ws-security-config-structure.json
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/json-ld/apache-cxf-context.jsonld
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/examples/apache-cxf-jaxrs-endpoint-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/examples/apache-cxf-jaxws-endpoint-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-cxf/refs/heads/main/examples/apache-cxf-ws-security-config-example.json
 maintainers:
 - FN: Kin Lane
