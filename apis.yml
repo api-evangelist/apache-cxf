@@ -90,6 +90,10 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: VulnerabilityDisclosure
+  url: security/apache-cxf-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/apache-cxf-domain-security.yml
 - type: Portal
   url: https://cxf.apache.org/
 - type: Documentation
