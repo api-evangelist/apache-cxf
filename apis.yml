@@ -102,6 +102,13 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: SecurityPolicy
+  url: https://github.com/apache/cxf/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/apache/.github/blob/main/.github/CODE_OF_CONDUCT.md
+- type: License
+  name: Apache-2.0
+  url: https://github.com/apache/cxf/blob/main/LICENSE
 - type: VulnerabilityDisclosure
   url: security/apache-cxf-vulnerability-disclosure.yml
 - type: DomainSecurity
