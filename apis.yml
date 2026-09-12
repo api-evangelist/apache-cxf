@@ -124,6 +124,8 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: Website
+  url: https://www.apache.org/
 - type: SecurityPolicy
   url: https://github.com/apache/cxf/blob/main/SECURITY.md
 - type: CodeOfConduct
